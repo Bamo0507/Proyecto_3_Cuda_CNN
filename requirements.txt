@@ -1,0 +1,3 @@
+# Base local CPU. Versiones por fijar tras validar local y Colab.
+numpy
+numba

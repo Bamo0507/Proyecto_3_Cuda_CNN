@@ -1,0 +1,14 @@
+# Entorno Python y caches locales
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Credenciales locales
+.env
+.env.*
+!.env.example
+
+# Archivos del sistema
+.DS_Store

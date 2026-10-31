@@ -1,0 +1,4 @@
+# Ejecutar solo en el entorno Linux con GPU NVIDIA de Colab.
+# CUDA 12 es el punto de partida; comprobar compatibilidad con el entorno asignado.
+-r requirements.txt
+numba-cuda[cu12]
