@@ -1,0 +1,41 @@
+"""Configuracion compartida por las implementaciones CPU y CUDA."""
+
+from pathlib import Path
+
+
+DIRECTORIO_PROYECTO = Path(__file__).resolve().parent.parent
+DIRECTORIO_DATOS_PROCESADOS = DIRECTORIO_PROYECTO / "data" / "processed"
+DIRECTORIO_MODELOS = DIRECTORIO_PROYECTO / "models"
+DIRECTORIO_RESULTADOS = DIRECTORIO_PROYECTO / "resultados"
+
+RUTA_PARTICIONES = DIRECTORIO_DATOS_PROCESADOS / "01_particiones.csv"
+RUTA_TENSORES = DIRECTORIO_DATOS_PROCESADOS / "02_tensores.npz"
+
+SEMILLA_ALEATORIA = 123
+
+CLASES = (
+    "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+    "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+    "del", "nothing", "space",
+)
+CANTIDAD_CLASES = len(CLASES)
+
+RESOLUCION_IMAGEN = 64
+CANTIDAD_CANALES = 1
+FORMA_ENTRADA = (
+    RESOLUCION_IMAGEN,
+    RESOLUCION_IMAGEN,
+    CANTIDAD_CANALES,
+)
+TIPO_DATOS = "float32"
+
+FILTROS_CONVOLUCION = (32, 64, 64)
+TAMANO_FILTRO = (3, 3)
+PASO_CONVOLUCION = 1
+PADDING_CONVOLUCION = "same"
+TAMANO_POOLING = (2, 2)
+PASO_POOLING = 2
+NEURONAS_CAPA_DENSA = 128
+
+TAMANO_LOTE = 64
+TASA_APRENDIZAJE = 0.001
