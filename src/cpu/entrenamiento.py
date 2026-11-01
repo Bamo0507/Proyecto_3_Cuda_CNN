@@ -4,8 +4,8 @@ import numpy as np
 
 import config
 from cpu.cnn import cnn_backward, cnn_forward
-from cpu.optimizador import adam_actualizar
-from cpu.perdida import cross_entropy_forward, softmax_cross_entropy_backward
+from cpu.operaciones.optimizador import adam_actualizar
+from cpu.operaciones.perdida import cross_entropy_forward, softmax_cross_entropy_backward
 
 
 def inicializar_estado_adam(parametros):

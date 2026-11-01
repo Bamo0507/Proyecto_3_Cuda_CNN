@@ -4,7 +4,7 @@ import numpy as np
 
 import config
 from cpu.cnn import cnn_forward
-from cpu.perdida import cross_entropy_forward
+from cpu.operaciones.perdida import cross_entropy_forward
 
 
 def predecir(imagenes, parametros):
