@@ -22,7 +22,7 @@ def preparar_memoria(parametros, tamano_lote=config.TAMANO_LOTE, entrenamiento=T
         for nombre_parametro, valores_parametro in parametros.items()
     }
     formas_activaciones = {"imagenes": (tamano_lote, *config.FORMA_ENTRADA)}
-    formas_enteros = {}
+    formas_enteros = {"etiquetas": (tamano_lote,)}
     alto_entrada, ancho_entrada, canales_entrada = config.FORMA_ENTRADA
 
     for numero_capa, cantidad_filtros in enumerate(config.FILTROS_CONVOLUCION, start=1):
@@ -52,17 +52,16 @@ def preparar_memoria(parametros, tamano_lote=config.TAMANO_LOTE, entrenamiento=T
         "densa1_relu": (tamano_lote, config.NEURONAS_CAPA_DENSA),
         "densa2_salida": (tamano_lote, config.CANTIDAD_CLASES),
         "probabilidades": (tamano_lote, config.CANTIDAD_CLASES),
+        "perdidas_individuales": (tamano_lote,),
+        "perdida_promedio": (1,),
     })
 
     if entrenamiento:
-        formas_enteros["etiquetas"] = (tamano_lote,)
         formas_activaciones.update({
             "gradiente_logits": (tamano_lote, config.CANTIDAD_CLASES),
             "densa2_gradiente_entrada": (tamano_lote, config.NEURONAS_CAPA_DENSA),
             "densa1_gradiente_relu": (tamano_lote, config.NEURONAS_CAPA_DENSA),
             "densa1_gradiente_entrada": (tamano_lote, cantidad_entradas_densas),
-            "perdidas_individuales": (tamano_lote,),
-            "perdida_promedio": (1,),
         })
 
     buffers = {
@@ -118,8 +117,6 @@ def cargar_lote(memoria, imagenes, etiquetas=None):
         raise ValueError("El lote debe tener entre 1 imagen y la capacidad reservada.")
 
     if etiquetas is not None:
-        if not memoria["entrenamiento"]:
-            raise ValueError("La memoria de prediccion no incluye etiquetas de entrenamiento.")
         if etiquetas.shape != (cantidad_imagenes,):
             raise ValueError("Debe existir una etiqueta por imagen.")
         if not np.issubdtype(etiquetas.dtype, np.integer):
