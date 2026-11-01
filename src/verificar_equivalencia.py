@@ -10,11 +10,16 @@ import config
 from compartido.parametros import inicializar_parametros
 from compartido.persistencia import cargar_parametros
 from cpu.cnn import cnn_backward as cnn_backward_cpu, cnn_forward as cnn_forward_cpu
+from cpu.operaciones.activaciones import relu_backward as relu_backward_cpu
+from cpu.operaciones.convolucion import convolucion_backward as convolucion_backward_cpu
+from cpu.operaciones.densas import densa_backward as densa_backward_cpu
+from cpu.operaciones.pooling import maxpool_backward as maxpool_backward_cpu
 from cpu.operaciones.perdida import (
     cross_entropy_forward as perdida_cpu,
     softmax_cross_entropy_backward as gradiente_logits_cpu,
 )
 from gpu.cnn import cnn_backward as cnn_backward_gpu, cnn_forward as cnn_forward_gpu
+from gpu.operaciones.convolucion import convolucion_backward as convolucion_backward_gpu
 from gpu.memoria import cargar_lote, preparar_memoria
 from gpu.operaciones.perdida import (
     cross_entropy_forward as perdida_gpu,
@@ -44,6 +49,114 @@ def comparar(nombre, referencia, resultado, tolerancia_absoluta, tolerancia_rela
         flush=True,
     )
     return bool(coincide)
+
+
+def diagnosticar_pooling(cache_cpu, buffers):
+    """Muestra cambios de ruta y los valores de las ventanas que los produjeron."""
+    for numero_capa, bloque in enumerate(cache_cpu["bloques_convolucionales"], start=1):
+        posiciones_cpu = bloque["posiciones_maximos"]
+        posiciones_gpu = buffers[f"conv{numero_capa}_posiciones"].copy_to_host()
+        diferencias = np.argwhere(posiciones_cpu != posiciones_gpu)
+        salida_cpu = bloque["salida_convolucion"]
+        salida_gpu = buffers[f"conv{numero_capa}_salida"].copy_to_host()
+        cambios_relu = np.count_nonzero((salida_cpu > 0) != (salida_gpu > 0))
+        print(
+            f"Rutas conv{numero_capa}: {len(diferencias)}/{posiciones_cpu.size} "
+            f"posiciones de pooling distintas; {cambios_relu} cambios de mascara ReLU.",
+            flush=True,
+        )
+        for coordenadas in diferencias[:3]:
+            indice_imagen, fila_pooling, columna_pooling, indice_canal = coordenadas
+            fila_inicio = int(fila_pooling) * 2
+            columna_inicio = int(columna_pooling) * 2
+            ventana_cpu = np.maximum(salida_cpu[
+                indice_imagen, fila_inicio:fila_inicio + 2,
+                columna_inicio:columna_inicio + 2, indice_canal,
+            ], 0).ravel()
+            ventana_gpu = np.maximum(salida_gpu[
+                indice_imagen, fila_inicio:fila_inicio + 2,
+                columna_inicio:columna_inicio + 2, indice_canal,
+            ], 0).ravel()
+            print(f"  Ventana NHWC {coordenadas.tolist()}:", flush=True)
+            print("    CPU:", ventana_cpu.tolist(), "posicion:", int(posiciones_cpu[tuple(coordenadas)]))
+            print("    GPU:", ventana_gpu.tolist(), "posicion:", int(posiciones_gpu[tuple(coordenadas)]))
+
+
+def diagnosticar_backward(gradiente_logits, parametros, cache_cpu, memoria, argumentos):
+    """Localiza divergencias y aisla cada convolucion con operandos CPU identicos."""
+    buffers = memoria["buffers"]
+    tolerancias = (argumentos.tolerancia_absoluta, argumentos.tolerancia_relativa)
+    comparar(
+        "gradiente logits", gradiente_logits,
+        buffers["gradiente_logits"].copy_to_host(), *tolerancias,
+    )
+    gradiente_densa2 = densa_backward_cpu(
+        gradiente_logits, cache_cpu["entrada_densa2"], parametros["densa2_pesos"]
+    )[0]
+    comparar(
+        "backward densa2 -> entrada", gradiente_densa2,
+        buffers["densa2_gradiente_entrada"].copy_to_host(), *tolerancias,
+    )
+    gradiente_relu = relu_backward_cpu(gradiente_densa2, cache_cpu["salida_densa1"])
+    comparar(
+        "backward ReLU densa1", gradiente_relu,
+        buffers["densa1_gradiente_relu"].copy_to_host(), *tolerancias,
+    )
+    gradiente_activaciones = densa_backward_cpu(
+        gradiente_relu, cache_cpu["entrada_densa1"], parametros["densa1_pesos"]
+    )[0]
+    comparar(
+        "backward densa1 -> entrada", gradiente_activaciones,
+        buffers["densa1_gradiente_entrada"].copy_to_host(), *tolerancias,
+    )
+    gradiente_activaciones = gradiente_activaciones.reshape(cache_cpu["forma_salida_pooling"])
+
+    for indice_bloque in range(len(cache_cpu["bloques_convolucionales"]) - 1, -1, -1):
+        numero_capa = indice_bloque + 1
+        nombre_capa = f"conv{numero_capa}"
+        bloque = cache_cpu["bloques_convolucionales"][indice_bloque]
+        gradiente_pooling = maxpool_backward_cpu(
+            gradiente_activaciones, bloque["posiciones_maximos"], bloque["forma_entrada_pooling"]
+        )
+        comparar(
+            f"backward pooling{numero_capa}", gradiente_pooling,
+            buffers[f"{nombre_capa}_gradiente_pooling"].copy_to_host(), *tolerancias,
+        )
+        gradiente_convolucion = relu_backward_cpu(gradiente_pooling, bloque["salida_convolucion"])
+        comparar(
+            f"backward ReLU {nombre_capa}", gradiente_convolucion,
+            buffers[f"{nombre_capa}_gradiente_relu"].copy_to_host(), *tolerancias,
+        )
+        entrada = bloque["entrada_convolucion"]
+        pesos = parametros[f"{nombre_capa}_pesos"]
+        gradiente_activaciones, gradiente_pesos, gradiente_bias = convolucion_backward_cpu(
+            gradiente_convolucion, entrada, pesos
+        )
+        comparar(
+            f"backward {nombre_capa} -> entrada", gradiente_activaciones,
+            buffers[f"{nombre_capa}_gradiente_entrada"].copy_to_host(), *tolerancias,
+        )
+
+        # Se usan buffers aparte para conservar intacto el backward original de GPU.
+        entrada_device = cuda.to_device(np.ascontiguousarray(entrada))
+        pesos_device = cuda.to_device(np.ascontiguousarray(pesos))
+        gradiente_salida_device = cuda.to_device(np.ascontiguousarray(gradiente_convolucion))
+        gradiente_entrada_device = cuda.device_array_like(entrada_device)
+        gradiente_pesos_device = cuda.device_array_like(pesos_device)
+        gradiente_bias_device = cuda.device_array(gradiente_bias.shape, dtype=gradiente_bias.dtype)
+        convolucion_backward_gpu(
+            gradiente_salida_device, entrada_device, pesos_device,
+            gradiente_entrada_device, gradiente_pesos_device, gradiente_bias_device,
+        )
+        for nombre_gradiente, referencia, resultado_device in (
+            ("entrada", gradiente_activaciones, gradiente_entrada_device),
+            ("pesos", gradiente_pesos, gradiente_pesos_device),
+            ("bias", gradiente_bias, gradiente_bias_device),
+        ):
+            comparar(
+                f"AISLADO {nombre_capa} {nombre_gradiente}", referencia,
+                resultado_device.copy_to_host(), *tolerancias,
+            )
 
 
 def main():
@@ -150,6 +263,11 @@ def main():
             ))
 
     if not all(comprobaciones):
+        print("\nDIAGNOSTICO: rutas del forward", flush=True)
+        diagnosticar_pooling(cache_cpu, buffers)
+        if not argumentos.solo_forward:
+            print("\nDIAGNOSTICO: backward completo y convoluciones aisladas", flush=True)
+            diagnosticar_backward(gradiente_cpu, parametros, cache_cpu, memoria, argumentos)
         raise AssertionError(
             "Hay diferencias fuera de tolerancia. Revisar las capas indicadas; "
             "no ampliar tolerancias sin analizar la causa."
