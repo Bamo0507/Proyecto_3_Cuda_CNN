@@ -1,0 +1,95 @@
+{
+  "backend": "cpu",
+  "ruta_tensores": "C:\\Users\\danny\\Documents\\4to\\Paralela\\Proyecto_3_Cuda_CNN\\data\\processed\\02_tensores.npz",
+  "ruta_modelo": "C:\\Users\\danny\\Documents\\4to\\Paralela\\Proyecto_3_Cuda_CNN\\models\\dani\\dani_cpu_03.npz",
+  "configuracion": {
+    "epocas": 1,
+    "tamano_lote": 64,
+    "semilla": 123,
+    "forma_entrada": [
+      64,
+      64,
+      1
+    ],
+    "clases": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z",
+      "del",
+      "nothing",
+      "space"
+    ],
+    "tipo_datos": "float32",
+    "filtros_convolucion": [
+      32,
+      64,
+      64
+    ],
+    "tamano_filtro": [
+      3,
+      3
+    ],
+    "paso_convolucion": 1,
+    "padding_convolucion": "same",
+    "tamano_pooling": [
+      2,
+      2
+    ],
+    "paso_pooling": 2,
+    "neuronas_capa_densa": 128,
+    "tasa_aprendizaje": 0.001,
+    "beta_primer_momento": 0.9,
+    "beta_segundo_momento": 0.999,
+    "epsilon_adam": 1e-07
+  },
+  "versiones": {
+    "python": "3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "numba": "0.68.1"
+  },
+  "tiempos_segundos": {
+    "calentamiento_y_compilacion": 8.288572799999997,
+    "entrenamiento": 951.0572384,
+    "validacion": 90.69062099999996
+  },
+  "historial": [
+    {
+      "epoca": 1,
+      "perdida": 2.6474349952096423,
+      "accuracy": 0.24072249589490968,
+      "cantidad_imagenes": 12180,
+      "cantidad_lotes": 191,
+      "pasos_acumulados": 191
+    }
+  ],
+  "validacion": {
+    "perdida": 1.7853930389287371,
+    "accuracy": 0.4486590038314176,
+    "cantidad_imagenes": 2610
+  },
+  "pasos_entrenamiento": 191,
+  "incluye_estado_adam": false
+}

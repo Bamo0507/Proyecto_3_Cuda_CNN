@@ -1,0 +1,176 @@
+Entorno guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entorno.json
+>> C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Scripts\python.exe -u C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\src\entrenar_gpu.py --epocas 1 --tamano-lote 64 --ruta-modelo C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\models\dani\dani_gpu_01.npz --ruta-registro C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_gpu_01.json
+GPU: NVIDIA GeForce RTX 4070 Laptop GPU
+Datos: 12180 entrenamiento, 2610 validacion.
+Calentando y compilando los kernels con parametros descartables...
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 32 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 29 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 32 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 32 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 3 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 29 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+Entrenando 1 epocas con lotes de 64...
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 64 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 15 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 20 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 5 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+Epoca 1: perdida=2.6337, accuracy=0.2484
+Evaluando validacion, sin modificar pesos...
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 50 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 12 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+Preparacion GPU: 0.0141 s
+Entrenamiento caliente: 32.9060 s
+Recuperacion de pesos: 0.0006 s
+Validacion: {'perdida': 1.6504517203546576, 'accuracy': 0.503448275862069, 'cantidad_imagenes': 2610}
+Modelo guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\models\dani\dani_gpu_01.npz
+Registro guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_gpu_01.json
+>> C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Scripts\python.exe -u C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\src\entrenar_gpu.py --epocas 1 --tamano-lote 64 --ruta-modelo C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\models\dani\dani_gpu_02.npz --ruta-registro C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_gpu_02.json
+GPU: NVIDIA GeForce RTX 4070 Laptop GPU
+Datos: 12180 entrenamiento, 2610 validacion.
+Calentando y compilando los kernels con parametros descartables...
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 32 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 29 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 32 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 32 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 3 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 29 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+Entrenando 1 epocas con lotes de 64...
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 64 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 15 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 20 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 5 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+Epoca 1: perdida=2.6337, accuracy=0.2484
+Evaluando validacion, sin modificar pesos...
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 50 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 12 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+Preparacion GPU: 0.0203 s
+Entrenamiento caliente: 34.1962 s
+Recuperacion de pesos: 0.0013 s
+Validacion: {'perdida': 1.6504517203546576, 'accuracy': 0.503448275862069, 'cantidad_imagenes': 2610}
+Modelo guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\models\dani\dani_gpu_02.npz
+Registro guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_gpu_02.json
+>> C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Scripts\python.exe -u C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\src\entrenar_gpu.py --epocas 1 --tamano-lote 64 --ruta-modelo C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\models\dani\dani_gpu_03.npz --ruta-registro C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_gpu_03.json
+GPU: NVIDIA GeForce RTX 4070 Laptop GPU
+Datos: 12180 entrenamiento, 2610 validacion.
+Calentando y compilando los kernels con parametros descartables...
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 32 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 29 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 32 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 32 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 3 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 29 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+Entrenando 1 epocas con lotes de 64...
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 64 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 15 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 20 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 5 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+Epoca 1: perdida=2.6337, accuracy=0.2484
+Evaluando validacion, sin modificar pesos...
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 50 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 12 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+Preparacion GPU: 0.0139 s
+Entrenamiento caliente: 32.7971 s
+Recuperacion de pesos: 0.0008 s
+Validacion: {'perdida': 1.6504517203546576, 'accuracy': 0.503448275862069, 'cantidad_imagenes': 2610}
+Modelo guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\models\dani\dani_gpu_03.npz
+Registro guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_gpu_03.json
+>> C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Scripts\python.exe -u C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\src\entrenar_cpu.py --epocas 1 --tamano-lote 64 --ruta-modelo C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\models\dani\dani_cpu_01.npz --ruta-registro C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_cpu_01.json
+Datos: 12180 entrenamiento, 2610 validacion.
+Calentando las operaciones y compilando Numba...
+Entrenando 1 epocas con lotes de 64...
