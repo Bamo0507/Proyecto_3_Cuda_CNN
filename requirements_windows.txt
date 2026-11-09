@@ -1,0 +1,6 @@
+# Entorno local Windows con GPU NVIDIA (probado en RTX 4070 Laptop, driver 596.36).
+# cuda-core 1.2.x trae una DLL que Smart App Control de Windows bloquea; 1.1.1 funciona.
+-r requirements.txt
+numba-cuda[cu12]==0.30.4
+cuda-core==1.1.1
+matplotlib

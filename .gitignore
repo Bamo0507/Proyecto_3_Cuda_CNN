@@ -15,3 +15,6 @@ __pycache__/
 
 # Datos descargados desde Drive
 /data/processed/
+
+# Pesos entrenados: se respaldan en Drive
+/models/
