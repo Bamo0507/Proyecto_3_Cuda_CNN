@@ -1,0 +1,82 @@
+Entorno guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entorno.json
+Ya existe, se salta: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_gpu_01.json
+Ya existe, se salta: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_gpu_02.json
+Ya existe, se salta: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_gpu_03.json
+Ya existe, se salta: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_cpu_01.json
+>> C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Scripts\python.exe -u C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\src\entrenar_cpu.py --epocas 1 --tamano-lote 64 --ruta-modelo C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\models\dani\dani_cpu_02.npz --ruta-registro C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_cpu_02.json
+Datos: 12180 entrenamiento, 2610 validacion.
+Calentando las operaciones y compilando Numba...
+Entrenando 1 epocas con lotes de 64...
+Epoca 1: perdida=2.6474, accuracy=0.2407
+Evaluando validacion, sin modificar pesos...
+Entrenamiento: 722.1476 s
+Validacion: {'perdida': 1.7853930389287371, 'accuracy': 0.4486590038314176, 'cantidad_imagenes': 2610}
+Modelo guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\models\dani\dani_cpu_02.npz
+Registro guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_cpu_02.json
+>> C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Scripts\python.exe -u C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\src\entrenar_cpu.py --epocas 1 --tamano-lote 64 --ruta-modelo C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\models\dani\dani_cpu_03.npz --ruta-registro C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_cpu_03.json
+Datos: 12180 entrenamiento, 2610 validacion.
+Calentando las operaciones y compilando Numba...
+Entrenando 1 epocas con lotes de 64...
+Epoca 1: perdida=2.6474, accuracy=0.2407
+Evaluando validacion, sin modificar pesos...
+Entrenamiento: 951.0572 s
+Validacion: {'perdida': 1.7853930389287371, 'accuracy': 0.4486590038314176, 'cantidad_imagenes': 2610}
+Modelo guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\models\dani\dani_cpu_03.npz
+Registro guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_cpu_03.json
+>> C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Scripts\python.exe -u C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\src\medir_prediccion.py --backend gpu --ruta-modelo models\originales\gpu_01.npz --ruta-registro C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\prediccion_dani_gpu_01.json
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 32 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+Backend: gpu
+Carga de pesos: 62.819 ms
+preparacion_memoria_y_copia_pesos: 7.439 ms
+Primera prediccion (compilacion): 1.6106 s
+Latencia: 2.7179 +- 0.4027 ms (mediana 2.5403 ms, n=100)
+Registro guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\prediccion_dani_gpu_01.json
+>> C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Scripts\python.exe -u C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\src\medir_prediccion.py --backend gpu --ruta-modelo models\originales\gpu_01.npz --ruta-registro C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\prediccion_dani_gpu_02.json
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 32 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+Backend: gpu
+Carga de pesos: 17.017 ms
+preparacion_memoria_y_copia_pesos: 6.709 ms
+Primera prediccion (compilacion): 0.9934 s
+Latencia: 3.0613 +- 0.5568 ms (mediana 2.9492 ms, n=100)
+Registro guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\prediccion_dani_gpu_02.json
+>> C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Scripts\python.exe -u C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\src\medir_prediccion.py --backend gpu --ruta-modelo models\originales\gpu_01.npz --ruta-registro C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\prediccion_dani_gpu_03.json
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 32 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+Backend: gpu
+Carga de pesos: 17.324 ms
+preparacion_memoria_y_copia_pesos: 6.646 ms
+Primera prediccion (compilacion): 1.0136 s
+Latencia: 2.9821 +- 0.5335 ms (mediana 2.8856 ms, n=100)
+Registro guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\prediccion_dani_gpu_03.json
+>> C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Scripts\python.exe -u C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\src\medir_prediccion.py --backend cpu --ruta-modelo models\originales\gpu_01.npz --ruta-registro C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\prediccion_dani_cpu_01.json
+Backend: cpu
+Carga de pesos: 16.936 ms
+Primera prediccion (compilacion): 3.8526 s
+Latencia: 34.3474 +- 1.1018 ms (mediana 34.0158 ms, n=100)
+Registro guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\prediccion_dani_cpu_01.json
+>> C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Scripts\python.exe -u C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\src\medir_prediccion.py --backend cpu --ruta-modelo models\originales\gpu_01.npz --ruta-registro C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\prediccion_dani_cpu_02.json
+Backend: cpu
+Carga de pesos: 16.898 ms
+Primera prediccion (compilacion): 3.6752 s
+Latencia: 34.5479 +- 1.6434 ms (mediana 33.8344 ms, n=100)
+Registro guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\prediccion_dani_cpu_02.json
+>> C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Scripts\python.exe -u C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\src\medir_prediccion.py --backend cpu --ruta-modelo models\originales\gpu_01.npz --ruta-registro C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\prediccion_dani_cpu_03.json
+Backend: cpu
+Carga de pesos: 17.792 ms
+Primera prediccion (compilacion): 3.6874 s
+Latencia: 34.4131 +- 1.3773 ms (mediana 34.1125 ms, n=100)
+Registro guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\prediccion_dani_cpu_03.json

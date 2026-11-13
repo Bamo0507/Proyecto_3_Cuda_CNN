@@ -15,3 +15,8 @@ __pycache__/
 
 # Datos descargados desde Drive
 /data/processed/
+
+# Pesos entrenados: solo se versionan las corridas propias de models/dani
+/models/*
+!/models/dani/
+/models/dani/*.zip

@@ -1,0 +1,750 @@
+{
+  "backend": "gpu",
+  "ruta_modelo": "C:\\Users\\danny\\Documents\\4to\\Paralela\\Proyecto_3_Cuda_CNN\\models\\originales\\gpu_01.npz",
+  "semilla": 123,
+  "cantidad_calentamiento": 10,
+  "cantidad_mediciones": 100,
+  "versiones": {
+    "python": "3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "numba": "0.68.1",
+    "numba_cuda": "0.30.4"
+  },
+  "dispositivo": {
+    "nombre": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "capacidad_computo": [
+      8,
+      9
+    ]
+  },
+  "tiempos_segundos": {
+    "carga_pesos_disco": 0.0628186999999798,
+    "preparacion_memoria_y_copia_pesos": 0.007438799999818002,
+    "primera_prediccion_con_compilacion": 1.6106458000001567
+  },
+  "frontera_medicion": "Una imagen por llamada: forward y seleccion de etiqueta en CPU. En GPU incluye copia RAM->GPU de la imagen y copia GPU->RAM de las probabilidades; pesos y buffers ya residentes en GPU.",
+  "tiempos_calentamiento_ms": [
+    1610.6458000001567,
+    3.747499999917636,
+    3.8432000001193956,
+    2.8267999998661253,
+    2.573500000153217,
+    2.4518000000171014,
+    2.4863000001005275,
+    2.794399999856978,
+    3.563800000165429,
+    2.58069999995314
+  ],
+  "tiempos_prediccion_ms": [
+    2.4759000000358355,
+    2.4848000000474713,
+    2.7276000000711065,
+    3.196399999978894,
+    3.353299999844239,
+    2.540799999906085,
+    2.491799999916111,
+    2.459300000055009,
+    2.5243999998565414,
+    2.705999999989217,
+    3.381799999942814,
+    2.5026000000707427,
+    2.4700000001303124,
+    2.4578999998539075,
+    2.520600000025297,
+    3.3304000000953238,
+    4.161500000009255,
+    3.1338000001142063,
+    3.0368000000180473,
+    3.1912000001739216,
+    2.608799999961775,
+    4.418100000066261,
+    2.765700000054494,
+    2.503400000023248,
+    2.687900000182708,
+    2.6585000000522996,
+    2.585099999805607,
+    3.119299999980285,
+    2.7775999999448686,
+    2.5792000001274573,
+    2.9094999999870197,
+    2.4789999999939027,
+    2.512100000103601,
+    3.3023999999386433,
+    2.4985000000015134,
+    2.451599999858445,
+    2.8503999999429652,
+    2.4327000000994303,
+    2.452899999980218,
+    3.892499999892607,
+    3.174499999886393,
+    3.333999999995285,
+    2.649799999971947,
+    2.5047000001450215,
+    2.9491000000234635,
+    2.722299999959432,
+    2.693800000088231,
+    2.757399999836707,
+    2.4637999999868043,
+    2.397399999836125,
+    2.426199999945311,
+    3.325700000004872,
+    2.5284999999257707,
+    2.763499999900887,
+    2.5693000000046595,
+    2.455000000054497,
+    2.4160999998912303,
+    4.040999999915584,
+    3.4375999998701445,
+    2.55010000000766,
+    2.459100000123726,
+    2.4278000000776956,
+    2.735000000029686,
+    2.511099999992439,
+    2.735500000198954,
+    2.589199999874836,
+    2.454100000022663,
+    2.420600000050399,
+    2.431899999919551,
+    2.7268999999705557,
+    3.028500000027634,
+    2.5387000000591797,
+    2.6878999999553344,
+    2.498199999990902,
+    2.6176999999734107,
+    2.836399999978312,
+    2.861199999870223,
+    2.4851000000580825,
+    2.441999999973632,
+    2.3850000000038563,
+    2.5264000000788656,
+    2.5788000000375177,
+    3.019199999926059,
+    2.5115000000823784,
+    2.438299999994342,
+    2.4203999998917425,
+    2.420300000039788,
+    2.391799999941213,
+    2.913799999987532,
+    2.5279999999838765,
+    2.434800000173709,
+    2.3897999999462627,
+    2.365299999837589,
+    2.3721000000023196,
+    2.5398000000222964,
+    2.606399999876885,
+    2.4467999999160384,
+    2.405199999884644,
+    2.4219000001721724,
+    2.399599999989732
+  ],
+  "resumen_ms": {
+    "promedio": 2.7179399999931775,
+    "desviacion_estandar": 0.4027242092083131,
+    "mediana": 2.5402999999641906,
+    "minimo": 2.365299999837589,
+    "maximo": 4.418100000066261
+  },
+  "accuracy_muestra": 0.55,
+  "predicciones": [
+    {
+      "indice_validacion": 134,
+      "real": 1,
+      "predicha": 1,
+      "probabilidad": 0.4979070723056793
+    },
+    {
+      "indice_validacion": 1319,
+      "real": 14,
+      "predicha": 25,
+      "probabilidad": 0.3864201605319977
+    },
+    {
+      "indice_validacion": 1484,
+      "real": 16,
+      "predicha": 16,
+      "probabilidad": 0.9660028219223022
+    },
+    {
+      "indice_validacion": 923,
+      "real": 10,
+      "predicha": 10,
+      "probabilidad": 0.801097571849823
+    },
+    {
+      "indice_validacion": 1601,
+      "real": 17,
+      "predicha": 17,
+      "probabilidad": 0.23834912478923798
+    },
+    {
+      "indice_validacion": 63,
+      "real": 0,
+      "predicha": 0,
+      "probabilidad": 0.37032550573349
+    },
+    {
+      "indice_validacion": 1110,
+      "real": 12,
+      "predicha": 12,
+      "probabilidad": 0.4493376314640045
+    },
+    {
+      "indice_validacion": 1583,
+      "real": 17,
+      "predicha": 17,
+      "probabilidad": 0.23253875970840454
+    },
+    {
+      "indice_validacion": 84,
+      "real": 0,
+      "predicha": 18,
+      "probabilidad": 0.22842560708522797
+    },
+    {
+      "indice_validacion": 2039,
+      "real": 22,
+      "predicha": 21,
+      "probabilidad": 0.24732360243797302
+    },
+    {
+      "indice_validacion": 2547,
+      "real": 28,
+      "predicha": 28,
+      "probabilidad": 0.40655505657196045
+    },
+    {
+      "indice_validacion": 771,
+      "real": 8,
+      "predicha": 0,
+      "probabilidad": 0.5444076657295227
+    },
+    {
+      "indice_validacion": 2001,
+      "real": 22,
+      "predicha": 22,
+      "probabilidad": 0.13901472091674805
+    },
+    {
+      "indice_validacion": 552,
+      "real": 6,
+      "predicha": 6,
+      "probabilidad": 0.9767441749572754
+    },
+    {
+      "indice_validacion": 1293,
+      "real": 14,
+      "predicha": 25,
+      "probabilidad": 0.20916010439395905
+    },
+    {
+      "indice_validacion": 971,
+      "real": 10,
+      "predicha": 10,
+      "probabilidad": 0.19615250825881958
+    },
+    {
+      "indice_validacion": 1166,
+      "real": 12,
+      "predicha": 26,
+      "probabilidad": 0.2279421091079712
+    },
+    {
+      "indice_validacion": 332,
+      "real": 3,
+      "predicha": 3,
+      "probabilidad": 0.9866126775741577
+    },
+    {
+      "indice_validacion": 2561,
+      "real": 28,
+      "predicha": 25,
+      "probabilidad": 0.22860176861286163
+    },
+    {
+      "indice_validacion": 2393,
+      "real": 26,
+      "predicha": 26,
+      "probabilidad": 0.6218909025192261
+    },
+    {
+      "indice_validacion": 993,
+      "real": 11,
+      "predicha": 11,
+      "probabilidad": 0.4346303343772888
+    },
+    {
+      "indice_validacion": 2064,
+      "real": 22,
+      "predicha": 22,
+      "probabilidad": 0.5855504274368286
+    },
+    {
+      "indice_validacion": 559,
+      "real": 6,
+      "predicha": 26,
+      "probabilidad": 0.25279390811920166
+    },
+    {
+      "indice_validacion": 366,
+      "real": 4,
+      "predicha": 0,
+      "probabilidad": 0.6185957193374634
+    },
+    {
+      "indice_validacion": 676,
+      "real": 7,
+      "predicha": 7,
+      "probabilidad": 0.5094610452651978
+    },
+    {
+      "indice_validacion": 1747,
+      "real": 19,
+      "predicha": 19,
+      "probabilidad": 0.6433781385421753
+    },
+    {
+      "indice_validacion": 1875,
+      "real": 20,
+      "predicha": 17,
+      "probabilidad": 0.35524874925613403
+    },
+    {
+      "indice_validacion": 873,
+      "real": 9,
+      "predicha": 9,
+      "probabilidad": 0.6294053196907043
+    },
+    {
+      "indice_validacion": 1595,
+      "real": 17,
+      "predicha": 23,
+      "probabilidad": 0.23421739041805267
+    },
+    {
+      "indice_validacion": 485,
+      "real": 5,
+      "predicha": 5,
+      "probabilidad": 0.6933048963546753
+    },
+    {
+      "indice_validacion": 2321,
+      "real": 25,
+      "predicha": 25,
+      "probabilidad": 0.5734793543815613
+    },
+    {
+      "indice_validacion": 1873,
+      "real": 20,
+      "predicha": 17,
+      "probabilidad": 0.2361593097448349
+    },
+    {
+      "indice_validacion": 2228,
+      "real": 24,
+      "predicha": 24,
+      "probabilidad": 0.15083381533622742
+    },
+    {
+      "indice_validacion": 1507,
+      "real": 16,
+      "predicha": 16,
+      "probabilidad": 0.9967882633209229
+    },
+    {
+      "indice_validacion": 1738,
+      "real": 19,
+      "predicha": 25,
+      "probabilidad": 0.2820740044116974
+    },
+    {
+      "indice_validacion": 670,
+      "real": 7,
+      "predicha": 7,
+      "probabilidad": 0.8694837689399719
+    },
+    {
+      "indice_validacion": 2349,
+      "real": 26,
+      "predicha": 9,
+      "probabilidad": 0.2383495569229126
+    },
+    {
+      "indice_validacion": 434,
+      "real": 4,
+      "predicha": 0,
+      "probabilidad": 0.20443062484264374
+    },
+    {
+      "indice_validacion": 2541,
+      "real": 28,
+      "predicha": 28,
+      "probabilidad": 0.7943649291992188
+    },
+    {
+      "indice_validacion": 1130,
+      "real": 12,
+      "predicha": 18,
+      "probabilidad": 0.49094676971435547
+    },
+    {
+      "indice_validacion": 695,
+      "real": 7,
+      "predicha": 6,
+      "probabilidad": 0.263403981924057
+    },
+    {
+      "indice_validacion": 19,
+      "real": 0,
+      "predicha": 0,
+      "probabilidad": 0.8555285334587097
+    },
+    {
+      "indice_validacion": 2224,
+      "real": 24,
+      "predicha": 24,
+      "probabilidad": 0.2158997356891632
+    },
+    {
+      "indice_validacion": 441,
+      "real": 4,
+      "predicha": 0,
+      "probabilidad": 0.6368787884712219
+    },
+    {
+      "indice_validacion": 1356,
+      "real": 15,
+      "predicha": 16,
+      "probabilidad": 0.23832166194915771
+    },
+    {
+      "indice_validacion": 2373,
+      "real": 26,
+      "predicha": 26,
+      "probabilidad": 0.6567854285240173
+    },
+    {
+      "indice_validacion": 422,
+      "real": 4,
+      "predicha": 17,
+      "probabilidad": 0.2542968988418579
+    },
+    {
+      "indice_validacion": 2551,
+      "real": 28,
+      "predicha": 28,
+      "probabilidad": 0.33490118384361267
+    },
+    {
+      "indice_validacion": 38,
+      "real": 0,
+      "predicha": 0,
+      "probabilidad": 0.5796887278556824
+    },
+    {
+      "indice_validacion": 1035,
+      "real": 11,
+      "predicha": 11,
+      "probabilidad": 0.13262206315994263
+    },
+    {
+      "indice_validacion": 2171,
+      "real": 24,
+      "predicha": 24,
+      "probabilidad": 0.37711116671562195
+    },
+    {
+      "indice_validacion": 1134,
+      "real": 12,
+      "predicha": 25,
+      "probabilidad": 0.27314886450767517
+    },
+    {
+      "indice_validacion": 682,
+      "real": 7,
+      "predicha": 7,
+      "probabilidad": 0.7488778829574585
+    },
+    {
+      "indice_validacion": 639,
+      "real": 7,
+      "predicha": 26,
+      "probabilidad": 0.4437541961669922
+    },
+    {
+      "indice_validacion": 1059,
+      "real": 11,
+      "predicha": 11,
+      "probabilidad": 0.2700014114379883
+    },
+    {
+      "indice_validacion": 462,
+      "real": 5,
+      "predicha": 3,
+      "probabilidad": 0.2156112790107727
+    },
+    {
+      "indice_validacion": 810,
+      "real": 9,
+      "predicha": 9,
+      "probabilidad": 0.22842560708522797
+    },
+    {
+      "indice_validacion": 2082,
+      "real": 23,
+      "predicha": 23,
+      "probabilidad": 0.34301477670669556
+    },
+    {
+      "indice_validacion": 2181,
+      "real": 24,
+      "predicha": 19,
+      "probabilidad": 0.35766085982322693
+    },
+    {
+      "indice_validacion": 2217,
+      "real": 24,
+      "predicha": 22,
+      "probabilidad": 0.14368495345115662
+    },
+    {
+      "indice_validacion": 2277,
+      "real": 25,
+      "predicha": 25,
+      "probabilidad": 0.8335689902305603
+    },
+    {
+      "indice_validacion": 1878,
+      "real": 20,
+      "predicha": 16,
+      "probabilidad": 0.1473577320575714
+    },
+    {
+      "indice_validacion": 622,
+      "real": 6,
+      "predicha": 7,
+      "probabilidad": 0.3790433704853058
+    },
+    {
+      "indice_validacion": 2437,
+      "real": 27,
+      "predicha": 27,
+      "probabilidad": 0.9334735870361328
+    },
+    {
+      "indice_validacion": 1503,
+      "real": 16,
+      "predicha": 16,
+      "probabilidad": 0.6843030452728271
+    },
+    {
+      "indice_validacion": 955,
+      "real": 10,
+      "predicha": 1,
+      "probabilidad": 0.16364286839962006
+    },
+    {
+      "indice_validacion": 1316,
+      "real": 14,
+      "predicha": 2,
+      "probabilidad": 0.18435068428516388
+    },
+    {
+      "indice_validacion": 2242,
+      "real": 24,
+      "predicha": 24,
+      "probabilidad": 0.49697092175483704
+    },
+    {
+      "indice_validacion": 1119,
+      "real": 12,
+      "predicha": 12,
+      "probabilidad": 0.6271767020225525
+    },
+    {
+      "indice_validacion": 989,
+      "real": 10,
+      "predicha": 17,
+      "probabilidad": 0.2471121996641159
+    },
+    {
+      "indice_validacion": 615,
+      "real": 6,
+      "predicha": 6,
+      "probabilidad": 0.9398276209831238
+    },
+    {
+      "indice_validacion": 1217,
+      "real": 13,
+      "predicha": 13,
+      "probabilidad": 0.6835352778434753
+    },
+    {
+      "indice_validacion": 37,
+      "real": 0,
+      "predicha": 0,
+      "probabilidad": 0.8762751221656799
+    },
+    {
+      "indice_validacion": 1979,
+      "real": 21,
+      "predicha": 16,
+      "probabilidad": 0.17913146317005157
+    },
+    {
+      "indice_validacion": 1874,
+      "real": 20,
+      "predicha": 16,
+      "probabilidad": 0.140835240483284
+    },
+    {
+      "indice_validacion": 588,
+      "real": 6,
+      "predicha": 7,
+      "probabilidad": 0.6228103041648865
+    },
+    {
+      "indice_validacion": 1141,
+      "real": 12,
+      "predicha": 13,
+      "probabilidad": 0.2589513659477234
+    },
+    {
+      "indice_validacion": 1527,
+      "real": 16,
+      "predicha": 16,
+      "probabilidad": 0.24676989018917084
+    },
+    {
+      "indice_validacion": 1707,
+      "real": 18,
+      "predicha": 16,
+      "probabilidad": 0.1397443264722824
+    },
+    {
+      "indice_validacion": 2538,
+      "real": 28,
+      "predicha": 28,
+      "probabilidad": 0.9962239265441895
+    },
+    {
+      "indice_validacion": 2118,
+      "real": 23,
+      "predicha": 18,
+      "probabilidad": 0.23616215586662292
+    },
+    {
+      "indice_validacion": 1666,
+      "real": 18,
+      "predicha": 18,
+      "probabilidad": 0.1697622388601303
+    },
+    {
+      "indice_validacion": 2017,
+      "real": 22,
+      "predicha": 21,
+      "probabilidad": 0.3720313012599945
+    },
+    {
+      "indice_validacion": 2578,
+      "real": 28,
+      "predicha": 28,
+      "probabilidad": 0.5768629312515259
+    },
+    {
+      "indice_validacion": 1203,
+      "real": 13,
+      "predicha": 13,
+      "probabilidad": 0.9194955229759216
+    },
+    {
+      "indice_validacion": 2028,
+      "real": 22,
+      "predicha": 21,
+      "probabilidad": 0.24197839200496674
+    },
+    {
+      "indice_validacion": 2051,
+      "real": 22,
+      "predicha": 17,
+      "probabilidad": 0.25185078382492065
+    },
+    {
+      "indice_validacion": 656,
+      "real": 7,
+      "predicha": 7,
+      "probabilidad": 0.4780176877975464
+    },
+    {
+      "indice_validacion": 470,
+      "real": 5,
+      "predicha": 5,
+      "probabilidad": 0.9099068641662598
+    },
+    {
+      "indice_validacion": 2350,
+      "real": 26,
+      "predicha": 26,
+      "probabilidad": 0.9795447587966919
+    },
+    {
+      "indice_validacion": 184,
+      "real": 2,
+      "predicha": 2,
+      "probabilidad": 0.9989320635795593
+    },
+    {
+      "indice_validacion": 1267,
+      "real": 14,
+      "predicha": 24,
+      "probabilidad": 0.3246486783027649
+    },
+    {
+      "indice_validacion": 540,
+      "real": 6,
+      "predicha": 7,
+      "probabilidad": 0.6473950743675232
+    },
+    {
+      "indice_validacion": 8,
+      "real": 0,
+      "predicha": 0,
+      "probabilidad": 0.6490544676780701
+    },
+    {
+      "indice_validacion": 1190,
+      "real": 13,
+      "predicha": 25,
+      "probabilidad": 0.12416476011276245
+    },
+    {
+      "indice_validacion": 837,
+      "real": 9,
+      "predicha": 24,
+      "probabilidad": 0.1612432301044464
+    },
+    {
+      "indice_validacion": 449,
+      "real": 4,
+      "predicha": 12,
+      "probabilidad": 0.6930542588233948
+    },
+    {
+      "indice_validacion": 197,
+      "real": 2,
+      "predicha": 2,
+      "probabilidad": 0.8861746191978455
+    },
+    {
+      "indice_validacion": 41,
+      "real": 0,
+      "predicha": 0,
+      "probabilidad": 0.7845261693000793
+    },
+    {
+      "indice_validacion": 375,
+      "real": 4,
+      "predicha": 18,
+      "probabilidad": 0.5580962300300598
+    }
+  ]
+}

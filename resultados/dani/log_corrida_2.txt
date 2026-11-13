@@ -1,0 +1,18 @@
+Entorno guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entorno.json
+Ya existe, se salta: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_gpu_01.json
+Ya existe, se salta: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_gpu_02.json
+Ya existe, se salta: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_gpu_03.json
+>> C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Scripts\python.exe -u C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\src\entrenar_cpu.py --epocas 1 --tamano-lote 64 --ruta-modelo C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\models\dani\dani_cpu_01.npz --ruta-registro C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_cpu_01.json
+Datos: 12180 entrenamiento, 2610 validacion.
+Calentando las operaciones y compilando Numba...
+Entrenando 1 epocas con lotes de 64...
+Epoca 1: perdida=2.6474, accuracy=0.2407
+Evaluando validacion, sin modificar pesos...
+Entrenamiento: 588.5611 s
+Validacion: {'perdida': 1.7853930389287371, 'accuracy': 0.4486590038314176, 'cantidad_imagenes': 2610}
+Modelo guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\models\dani\dani_cpu_01.npz
+Registro guardado: C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_cpu_01.json
+>> C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\.venv\Scripts\python.exe -u C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\src\entrenar_cpu.py --epocas 1 --tamano-lote 64 --ruta-modelo C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\models\dani\dani_cpu_02.npz --ruta-registro C:\Users\danny\Documents\4to\Paralela\Proyecto_3_Cuda_CNN\resultados\dani\entrenamiento_dani_cpu_02.json
+Datos: 12180 entrenamiento, 2610 validacion.
+Calentando las operaciones y compilando Numba...
+Entrenando 1 epocas con lotes de 64...

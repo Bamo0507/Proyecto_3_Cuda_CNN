@@ -1,0 +1,108 @@
+{
+  "backend": "gpu",
+  "ruta_tensores": "C:\\Users\\danny\\Documents\\4to\\Paralela\\Proyecto_3_Cuda_CNN\\data\\processed\\02_tensores.npz",
+  "ruta_modelo": "C:\\Users\\danny\\Documents\\4to\\Paralela\\Proyecto_3_Cuda_CNN\\models\\dani\\dani_gpu_01.npz",
+  "configuracion": {
+    "epocas": 1,
+    "tamano_lote": 64,
+    "semilla": 123,
+    "forma_entrada": [
+      64,
+      64,
+      1
+    ],
+    "clases": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z",
+      "del",
+      "nothing",
+      "space"
+    ],
+    "tipo_datos": "float32",
+    "filtros_convolucion": [
+      32,
+      64,
+      64
+    ],
+    "tamano_filtro": [
+      3,
+      3
+    ],
+    "paso_convolucion": 1,
+    "padding_convolucion": "same",
+    "tamano_pooling": [
+      2,
+      2
+    ],
+    "paso_pooling": 2,
+    "neuronas_capa_densa": 128,
+    "tasa_aprendizaje": 0.001,
+    "beta_primer_momento": 0.9,
+    "beta_segundo_momento": 0.999,
+    "epsilon_adam": 1e-07
+  },
+  "versiones": {
+    "python": "3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "numba": "0.68.1",
+    "numba_cuda": "0.30.4"
+  },
+  "dispositivo": {
+    "nombre": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "capacidad_computo": [
+      8,
+      9
+    ]
+  },
+  "tiempos_segundos": {
+    "preparacion_calentamiento_gpu": 0.010586599935777485,
+    "calentamiento_y_compilacion": 1.720735099981539,
+    "preparacion_gpu": 0.01411690004169941,
+    "entrenamiento": 32.905988199985586,
+    "recuperacion_parametros": 0.0006352999480441213,
+    "entrenamiento_con_preparacion_y_recuperacion": 32.92074039997533,
+    "validacion": 0.5544228999642655
+  },
+  "frontera_entrenamiento": "Lotes en RAM, transferencias de cada lote, kernels y metricas en RAM; pesos y momentos residentes en GPU.",
+  "historial": [
+    {
+      "epoca": 1,
+      "perdida": 2.6337319013520415,
+      "accuracy": 0.248440065681445,
+      "cantidad_imagenes": 12180,
+      "cantidad_lotes": 191,
+      "pasos_acumulados": 191
+    }
+  ],
+  "validacion": {
+    "perdida": 1.6504517203546576,
+    "accuracy": 0.503448275862069,
+    "cantidad_imagenes": 2610
+  },
+  "pasos_entrenamiento": 191,
+  "incluye_estado_adam": false
+}
